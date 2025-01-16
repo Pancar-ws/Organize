@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Nomor-4 [Skenario-1]"/>
+        <attribute name="authors" value="Pancar Wahyu"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-01-11 07:34:11 AM"/>
+        <attribute name="created" value="UGFuY2FyIFdhaHl1O0xBUFRPUC1FOEZLQlNNRTsyMDI1LTAxLTExOzA2OjUzOjUwIEFNOzM0ODk="/>
+        <attribute name="edited" value="UGFuY2FyIFdhaHl1O0xBUFRPUC1FOEZLQlNNRTsyMDI1LTAxLTExOzA3OjM0OjExIEFNOzI7MzU5NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sensorA, sensorB" type="Integer" array="False" size=""/>
+            <declare name="mobilKanan, mobilKiri" type="Integer" array="False" size=""/>
+            <declare name="mobilJalan" type="String" array="False" size=""/>
+            <assign variable="mobilJalan" expression="&quot;Z&quot;"/>
+            <assign variable="mobilKanan" expression="0"/>
+            <assign variable="mobilKiri" expression="0"/>
+            <while expression="mobilJalan == &quot;Z&quot;">
+                <comment text="input sensorB dan sensorA hanya untuk kepentingan memisalkan bahwasanya sensor tersebut sudah aktif"/>
+                <input variable="sensorB"/>
+                <input variable="sensorA"/>
+                <if expression="sensorB == 1 and sensorA == 0">
+                    <then>
+                        <assign variable="mobilKanan" expression="mobilKanan+1"/>
+                        <output expression="mobilKanan" newline="True"/>
+                        <assign variable="sensorA" expression="1"/>
+                        <if expression="sensorB = 1 and sensorA = 1">
+                            <then>
+                                <assign variable="mobilKanan" expression="mobilKanan+1"/>
+                                <output expression="mobilKanan" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </then>
+                    <else>
+                        <if expression="sensorB == 0 and sensorA == 1">
+                            <then>
+                                <assign variable="mobilKiri" expression="mobilKiri +1"/>
+                                <output expression="mobilKiri" newline="True"/>
+                                <assign variable="sensorB" expression="1"/>
+                                <if expression="sensorB = 1 and sensorA = 1">
+                                    <then>
+                                        <assign variable="mobilKiri" expression="mobilKiri+1"/>
+                                        <output expression="mobilKiri" newline="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis.id</title>
+    <link rel="icon" href="static/head.png">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background: url(static/bg-5.jpeg); 
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .header h1 {
+            font-size: 3em;
+            margin: 0;
+            
+        }
+        .header p {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .header .btn {
+            margin-top: 0px;
+            padding: 1px 1px;
+            font-size: 1.88em;
+            background-color:white;
+            color: black;
+            text-decoration: none;
+            border-radius: 100px;
+            width: 175px;
+            height: 40px;
+            text-align: center;
+            /* float: right; */
+            
+        }
+        .header .btn:hover{
+            background-color: green;
+            color: white;
+    
+        }
+        .about-section {
+            background-color: #712321;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .about-section h2 {
+            margin-bottom: 20px;
+
+        }
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            
+        }
+        .team .member {
+            background-color:white;
+            color: blueviolet;
+            border-radius: 8px;
+            padding: 15px;
+            width: 200px;
+            float: right;
+            font-size: 10px;
+            
+        }
+
+        .team .member {
+            color: black;
+        }
+        
+        .team .member img {
+            width: 80px;
+            height: 80px;
+            border-radius: 100%;
+            margin-bottom: 10;
+            float: left;
+            
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Selamat Datang di Kuis.id</h1>
+        <p>By Kelompok Anggrek Mekar</p>
+        <p></p>
+        <a href="/kuis" class="btn">Play Now</a>
+    </div>
+    <div class="about-section">
+        <h2>About Us</h2>
+        <div class="team">
+            <div class="member">
+                <img src="static/fotopribadi.jpg" alt="Profile">
+                <p><strong>H1D024012</strong></p>
+                <p><strong>Mhd. Fahri Irfandi Dewantara</strong></p>
+            </div>
+            <div class="member">
+                <img src="static/pancar.jpg" alt="Profile">
+                <p><strong>H1D024018</strong></p>
+                <p><strong>Pancar Wahyu Setiabi</strong></p>
+            </div>
+            <div class="member">
+                <img src="static/faqih.jpg" alt="Profile">
+                <p><strong>H1D024047</strong></p>
+                <p><strong>Faqih Ardiansyah</strong></p>
+            </div>
+            <div class="member">
+                <img src="static/haq-copy.jpg" alt="Profile">
+                <p><strong>H1D024060</strong></p>
+                <p><strong>Muhammad Sholahatul Haq</strong></p>
+            </div>
+            <div class="member">
+                <img src="static/jep.jpg" alt="Profile">
+                <p><strong>H1D024082</strong></p>
+                <p><strong>Muhammad Hudzayfa Ismail</strong></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

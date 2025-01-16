@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Nomor-1"/>
+        <attribute name="authors" value="Pancar Wahyu"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-01-11 06:49:47 AM"/>
+        <attribute name="created" value="UGFuY2FyIFdhaHl1O0xBUFRPUC1FOEZLQlNNRTsyMDI1LTAxLTEwOzA5OjE2OjMyIFBNOzM1MDU="/>
+        <attribute name="edited" value="UGFuY2FyIFdhaHl1O0xBUFRPUC1FOEZLQlNNRTsyMDI1LTAxLTExOzA2OjQ5OjQ3IEFNOzE7MzYwOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x1, y1, x2, y2, N, cx, cy, r, x, y, jarak, i, K, L, M, nilai" type="Integer" array="False" size=""/>
+            <assign variable="nilai" expression="0"/>
+            <input variable="x1"/>
+            <input variable="y1"/>
+            <input variable="x2"/>
+            <input variable="y2"/>
+            <input variable="N"/>
+            <for variable="i" start="1" end="N" direction="inc" step="1">
+                <input variable="cx"/>
+                <input variable="cy"/>
+                <input variable="r"/>
+                <comment text="Masuk ke persamaan garis singgung lingkaran: Kx + Ly + M = 0"/>
+                <assign variable="x" expression="x2-x1"/>
+                <assign variable="y" expression="y2-y1"/>
+                <assign variable="K" expression="y"/>
+                <assign variable="L" expression="-x"/>
+                <assign variable="M" expression="x2 * y1 - y2 * x1"/>
+                <assign variable="Jarak" expression="Abs (K*cx + L*cy + M)/Sqrt (K^2 + L^2)"/>
+                <if expression="Jarak &lt;= r">
+                    <then>
+                        <assign variable="nilai" expression="nilai +1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="Nilai" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

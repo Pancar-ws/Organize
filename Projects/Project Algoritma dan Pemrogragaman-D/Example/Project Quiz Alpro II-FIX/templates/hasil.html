@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Kuid.id</title>
+    <link rel="icon" href="static/head.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Hasil Kuis</h1>
+        <p>Skor Anda: {{ skor }} dari {{ total_soal }}</p>
+        <a href="/" class="btn">Kembali ke Halaman Utama</a>
+    </div>
+</body>
+</html>

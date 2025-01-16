@@ -1,0 +1,27 @@
+Function Main
+    Declare Integer x1, y1, x2, y2, N, cx, cy, r, x, y, jarak, i, K, L, M, nilai
+
+    Assign nilai = 0
+    Input x1
+    Input y1
+    Input x2
+    Input y2
+    Input N
+    For i = 1 to N
+        Input cx
+        Input cy
+        Input r
+
+        ... Masuk ke persamaan garis singgung lingkaran: Kx + Ly + M = 0
+        Assign x = x2-x1
+        Assign y = y2-y1
+        Assign K = y
+        Assign L = -x
+        Assign M = x2 * y1 - y2 * x1
+        Assign Jarak = Abs (K*cx + L*cy + M)/Sqrt (K^2 + L^2)
+        If Jarak <= r
+            Assign nilai = nilai +1
+        End
+    End
+    Output Nilai
+End

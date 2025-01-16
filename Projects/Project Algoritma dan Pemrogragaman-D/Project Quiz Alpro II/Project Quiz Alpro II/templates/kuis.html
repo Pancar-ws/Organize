@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Kuis</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Kuis</h1>
+        {% if umpan_balik %}
+            <div class="feedback">{{ umpan_balik }}</div>
+        {% endif %}
+        <form method="POST">
+            <p><strong>Soal {{ nomor_soal }} dari {{ total_soal }}:</strong></p>
+            <p>{{ soal["pertanyaan"] }}</p>
+            {% for pilihan in soal["pilihan"] %}
+                <label>
+                    <input type="radio" name="jawaban" value="{{ pilihan[0] }}" required>
+                    {{ pilihan }}
+                </label><br>
+            {% endfor %}
+            <button type="submit" class="btn">Jawab</button>
+        </form>
+    </div>
+</body>
+</html>

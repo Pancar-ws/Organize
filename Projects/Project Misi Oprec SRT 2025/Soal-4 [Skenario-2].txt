@@ -1,0 +1,34 @@
+Function Main
+    Declare Integer sensorA, sensorB
+    Declare Integer mobilKanan, mobilKiri
+    Declare String mobilJalan
+
+    Assign mobilJalan = "Z"
+    Assign mobilKanan = 0
+    Assign mobilKiri = 0
+    While mobilJalan == "Z"
+
+        ... input sensorB dan sensorA hanya untuk kepentingan memisalkan bahwasanya sensor tersebut sudah aktif
+        Input sensorB
+        Input sensorA
+        If sensorB == 1 and sensorA == 0
+            Assign mobilKanan = mobilKanan+1
+            Output mobilKanan
+            Assign sensorA = 1
+            If sensorB = 1 and sensorA = 1
+                Assign mobilKanan = mobilKanan+1
+                Output mobilKanan
+            End
+        Else
+            If sensorB == 0 and sensorA == 1
+                Assign mobilKiri = mobilKiri +1
+                Output mobilKiri
+                Assign sensorB = 1
+                If sensorB = 1 and sensorA = 1
+                    Assign mobilKiri = mobilKiri+1
+                    Output mobilKiri
+                End
+            End
+        End
+    End
+End

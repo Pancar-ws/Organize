@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Nomor-2"/>
+        <attribute name="authors" value="Pancar Wahyu"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-01-11 11:26:53 AM"/>
+        <attribute name="created" value="UGFuY2FyIFdhaHl1O0xBUFRPUC1FOEZLQlNNRTsyMDI1LTAxLTExOzA3OjM2OjIzIEFNOzM0OTE="/>
+        <attribute name="edited" value="UGFuY2FyIFdhaHl1O0xBUFRPUC1FOEZLQlNNRTsyMDI1LTAxLTExOzExOjI2OjUzIEFNOzE7MzU5Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="elements" type="Real" array="True" size="9"/>
+            <assign variable="elements" expression="{49961578496.000000,22845.121094,&#13;&#10;-311177760.000000, 22845.121094,114341404672.000000,&#13;&#10;97659.367188,&#13;&#10;-311177760.000000,97659.367188,&#13;&#10;64419688448.000000 &#13;&#10;}"/>
+            <declare name="matriks, n1, n2, n3" type="Real" array="True" size="3"/>
+            <assign variable="matriks[0]" expression="n1"/>
+            <assign variable="matriks[1]" expression="n2"/>
+            <assign variable="matriks[2]" expression="n3"/>
+            <for variable="i" start="1" end="3" direction="inc" step="1">
+                <for variable="j" start="1" end="3" direction="inc" step="1">
+                    <if expression="j &gt; i">
+                        <then>
+                            <assign variable="matriks[i][j]" expression="elements.pop(0)"/>
+                        </then>
+                        <else>
+                            <if expression="i &lt; j">
+                                <then>
+                                    <assign variable="matriks[i][j]" expression="&quot;\t&quot;"/>
+                                </then>
+                                <else>
+                                    <assign variable="matriks[i][j]" expression="elements.pop(0)"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </for>
+            </for>
+            <output expression="Output f'&lt;inertia ixx =&quot;{matriks[0][0]:.6e}&quot; ixy =&quot;{matriks[0][1]:.6e}&quot; ixz =&quot;{matriks[0][2]:.6e}&quot;\n&#13;&#10;iyy =&quot;{matriks[1][1]:.6e}&quot; iyz =&quot;{matriks[1][2]:.6e}&quot;\n izz =&quot;{matriks[2][2]:.6e}&quot;/&gt;'" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
